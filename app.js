@@ -38,10 +38,10 @@ app.get("/review/", async (request, response) => {
 //api 2
 
 app.post("/review/", async (request, response) => {
-  const { review, rating } = request.body;
-  const reviewData = `INSERT INTO review_data(review,rating)
+  const { review, rating, Id } = request.body;
+  const reviewData = `INSERT INTO review_data(review,rating,id)
                     VALUES(
-                        '${review}','${rating}');`;
+                        '${review}','${rating}','${Id}');`;
 
   const data = await db.run(reviewData);
   response.send("successfully");
