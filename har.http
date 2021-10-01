@@ -1,0 +1,20 @@
+get http://localhost:3000/review/
+###
+get http://localhost:3000/players/2
+###
+
+post http://localhost:3000/review/
+Content-Type: application/json
+
+{
+  "review": "Raju",
+  "rating":"5"
+}
+###
+get http://localhost:3000/matches/17/
+###
+get http://localhost:3000/players/5/matches
+###
+get http://localhost:3000/matches/1/players/
+###
+get http://localhost:3000/players/1/playerScores/
